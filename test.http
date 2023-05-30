@@ -1,0 +1,30 @@
+
+GET http://localhost:3000/api/login
+```
+
+###
+
+POST http://localhost:3000/api/login/new
+content-type: application/json
+
+  {
+    "name": "Pablo",
+    "email":"test4@test.com",
+    "password": "123456"
+  }
+
+
+###
+
+POST http://localhost:3000/api/login
+content-type: application/json
+
+  {
+    "email":"test1@test.com",
+    "password": "123456"
+  }
+
+###
+
+GET http://localhost:3000/api/login/renew
+x-token: "carlos"
