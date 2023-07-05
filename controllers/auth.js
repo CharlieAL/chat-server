@@ -7,7 +7,6 @@ const createUser = async (req, res = response) => {
   const { email, password } = req.body
   try {
     const emailExist = await User.find({ email })
-    console.log(emailExist.length)
 
     if (emailExist.length > 0) {
       return res.status(400).json({
@@ -16,7 +15,7 @@ const createUser = async (req, res = response) => {
       })
     }
 
-    const user = new User(req.body)
+    const user = User(req.body)
     //encrypt password
 
     const salt = bcrypt.genSaltSync(10)
@@ -65,6 +64,7 @@ const login = async (req, res = response) => {
       token
     })
   } catch (error) {
+    console.log(error)
     res.json({
       ok: false,
       msg: 'error en el servidor, revisar l'

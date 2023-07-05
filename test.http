@@ -21,10 +21,21 @@ content-type: application/json
 
   {
     "email":"test1@test.com",
-    "password": "123456"
+    "password": "123123"
   }
 
 ###
 
 GET http://localhost:3000/api/login/renew
-x-token: "carlos"
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc2Mjg0YTU1YmEwOThjZjg4ODVlM2UiLCJpYXQiOjE2ODU0ODAxMTksImV4cCI6MTY4NTU2NjUxOX0.8pQIDryIdPTNSOzBoIIh5bGi8FdmQ1dy-5nZzbW2S4A
+
+
+###
+
+GET http://localhost:3000/api/users
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc2Mjg0YTU1YmEwOThjZjg4ODVlM2UiLCJpYXQiOjE2ODU0ODAxMzYsImV4cCI6MTY4NTU2NjUzNn0.bnuyZZW4leJFaQwYKuj_h7kypj-5wsxzF4lVcTD__KQ
+
+###
+
+GET http://localhost:3000/api/messages/647789c91930824d653bfb49
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3ODUxODNkOWFmOWFkMGVjYmZhOWMiLCJpYXQiOjE2ODY3MTIwMDIsImV4cCI6MTY4Njc5ODQwMn0.Ejs5aRTmYbPj2-7kMJACRIQd7ZCLhHioOBLLfQ3rf5Q
